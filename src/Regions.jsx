@@ -11,7 +11,11 @@ export default function Regions({ regions, selectedRegion, updateSelectedRegion 
     <ul>
       {regions.map(({ id, name }) => (
         <li key={id}>
-          <button type="button" name={name} onClick={handleClickButton}>
+          <button
+            type="button"
+            name={name}
+            onClick={handleClickButton(id, name)}
+          >
             {
               `${name}${selectedRegion === name ? '(V)' : ''}`
             }

@@ -18,20 +18,22 @@ export function setRegions(regions) {
   };
 }
 
-export function setCategory(categoryId) {
+export function setCategory(id, name) {
   return {
     type: 'setCategory',
     payload: {
-      categoryId,
+      id,
+      name,
     },
   };
 }
 
-export function setRegion(region) {
+export function setRegion(id, name) {
   return {
     type: 'setRegion',
     payload: {
-      region,
+      id,
+      name,
     },
   };
 }
